@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shahriyer Sayem</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0a192f;
+    font-family: system-ui, sans-serif;
+    color: #e6edf3;
+    overflow: hidden;
+  }
+
+  /* Background blobs */
+  .bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+  }
+
+  .shape1 {
+    width: 400px;
+    height: 400px;
+    background: #7aa2ff;
+    top: -100px;
+    left: -100px;
+  }
+
+  .shape2 {
+    width: 500px;
+    height: 500px;
+    background: #1f4068;
+    bottom: -150px;
+    right: -100px;
+  }
+
+  /* Main container */
+  .container {
+    text-align: center;
+    z-index: 2;
+  }
+
+  .top-text {
+    letter-spacing: 8px;
+    font-size: 12px;
+    opacity: 0.6;
+    margin-bottom: 60px;
+  }
+
+  .logo {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 60px;
+  }
+
+  .year {
+    font-size: 12px;
+    opacity: 0.4;
+    letter-spacing: 4px;
+    margin-top: 60px;
+  }
+
+  .sub {
+    margin-top: 10px;
+    font-size: 13px;
+    opacity: 0.6;
+  }
+
+  .name-link {
+    color: #e6edf3;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+    }
+
+    .name-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 1px;
+    background: #7aa2ff;
+    transition: 0.3s;
+    }
+
+    .name-link:hover {
+    color: #7aa2ff;
+    }
+
+    .name-link:hover::after {
+    width: 100%;
+    }
+
+  /* subtle fade */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 1s ease forwards;
+  }
+
+  .delay-1 { animation-delay: 0.3s; }
+  .delay-2 { animation-delay: 0.6s; }
+  .delay-3 { animation-delay: 0.9s; }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="bg-shape shape1"></div>
+<div class="bg-shape shape2"></div>
+
+<div class="container">
+  
+  <div class="top-text fade-in">
+    COMING SOON
+  </div>
+
+  <div class="logo fade-in delay-1">
+    <a href="https://www.facebook.com/utso.sayem/" target="_blank" class="name-link">
+    Shahriyer Sayem</a>
+  </div>
+
+  <div class="sub fade-in delay-2">
+    Portfolio is being prepared
+  </div>
+
+  <div class="year fade-in delay-3">
+    2026
+  </div>
+
+</div>
+
+</body>
+</html>
