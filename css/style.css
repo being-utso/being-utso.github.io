@@ -195,6 +195,10 @@ img {
   letter-spacing: 0.2px;
 }
 
+.logo-text:hover {
+  color: var(--color-primary-dark);
+}
+
 .navbar-nav .nav-link {
   margin-left: var(--space-4);
   font-weight: 500;
