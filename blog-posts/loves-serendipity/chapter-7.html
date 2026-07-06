@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lessons From My First Design Project | Shahriyer Sayem</title>
+  <meta name="description" content="Lessons From My First Design Project - blog post by Shahriyer Sayem.">
+  <meta property="og:title" content="Lessons From My First Design Project | Shahriyer Sayem">
+  <meta property="og:description" content="Lessons From My First Design Project - blog post by Shahriyer Sayem.">
+  <meta property="og:image" content="../../images/portrait.svg">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: #7aa2ff;
+      width: 0%;
+      z-index: 999;
+    }
+
+    .chapter-container {
+      max-width: 700px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .chapter-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .chapter-number {
+      font-size: 13px;
+      opacity: 0.6;
+    }
+
+    .chapter-title {
+      font-size: 32px;
+      margin: 10px 0;
+      font-weight: 600;
+    }
+
+    .reading-time {
+      font-size: 13px;
+      opacity: 0.6;
+    }
+
+    .chapter-content {
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    .chapter-content p {
+      margin-bottom: 20px;
+    }
+
+    .chapter-content p:first-child::first-letter {
+      font-size: 40px;
+      font-weight: 600;
+      float: left;
+      margin-right: 8px;
+    }
+
+    .chapter-nav {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .chapter-nav a {
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      background: rgba(255,255,255,0.06);
+      transition: 0.2s;
+    }
+
+    .chapter-nav a:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      opacity: 0.6;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body class="dark-mode" id="page-top">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top site-navbar">
+      <div class="container">
+        <a class="navbar-brand logo-text" href="../../index.html">Shahriyer Sayem</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="../../blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../contact.html">Contact</a></li>
+          </ul>
+          <div class="theme-toggle-wrapper ms-lg-4 mt-3 mt-lg-0">
+            <input type="checkbox" id="theme-toggle" class="theme-toggle-input" aria-label="Switch to light mode">
+            <label for="theme-toggle" class="theme-toggle-slider" aria-hidden="true">
+              <span class="theme-toggle-moon">🌙</span>
+              <span class="theme-toggle-sun">☀</span>
+              <span class="theme-toggle-knob"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <p class="hero-label">Personal Blog</p>
+        <h3>Love’s Serendipity • Final Chapter</h3>
+        <h1>Forever and Always</h1>
+        <p class="banner-lead">Two separate paths choose to stay connected, again and again.</p>
+      </div>
+    </section>
+
+    <section class="py-section">
+      <div class="container">
+        <article class="info-card">
+          <p class="card-label">Personal Blog • March 2, 2026</p>
+          <img class="img-fluid mb-4" src="../../images/chapter7.png" alt="Design project process cover image" loading="lazy" decoding="async">
+          
+          <div class="story-intro">
+            <div class="story-container">
+              <!-- Story Content -->
+              <div class="progress-bar" id="progressBar"></div>
+
+                <div class="chapter-container">
+
+                  <div class="chapter-header">
+                    <p class="chapter-number">Chapter 7 of 7</p>
+                    <h1 class="chapter-title">Forever and Always</h1>
+                    <p class="reading-time" id="readingTime">Estimated reading time: --</p>
+                  </div>
+
+
+                  <!-- Chapter 7 Starts -->
+                  <div class="chapter-content" id="chapterContent">
+
+                    <p>
+                      The medical admission results were announced on a December afternoon, and Dhaka held its breath the way it always did — millions of private anxieties folded into a single collective moment, the kind that divides a life cleanly into before and after.
+                    </p>
+                    <p>Amaya found out alone.
+                      </p>
+                      <p>She had not planned it that way. Priya had offered to be there, her friends had offered to be there, even her mother had called twice that morning with the particular frequency of someone who wants to help and doesn't know how. But when the moment came — when she sat at her desk with her phone in her hand and the results portal open on her laptop — she found that she needed the silence. She needed to meet whatever was coming on her own terms, the way she met most things.
+                      </p>
+                      <p>She entered her roll number. The page loaded slowly, with the indifferent pace of a server that did not understand what was at stake. And then the words appeared on the screen, and Amaya read them once, and then again, and then she put her phone down very carefully on the desk and pressed both hands flat against the wood and breathed.
+                      </p>
+                      <p>65th position. Dhaka Medical College.
+                      </p>
+                      <p>She sat with it for a full minute before she allowed herself to feel it — the enormous, almost frightening fullness of a thing you have worked toward for so long that you had stopped letting yourself fully imagine it. Then she called her mother. Her mother cried immediately, which made Amaya cry, which she had not expected and was slightly annoyed by, because she had wanted to be composed about this.
+                      </p>
+                      <p>She was not composed. She was twenty years old and she had just gotten into medical college and she sat at her desk and cried with her mother's voice in her ear, and it was nothing like the dignified moment she had imagined, and it was exactly right.
+                      </p>
+                      <p>She texted Nafis that evening.
+                      </p>
+                      <p>65th in DMC. I can't quite believe it yet.
+                      </p>
+                      <p>His reply came within seconds: I knew. I always knew. I'm so proud of you.
+                      </p>
+                      <p>Then: Now go sleep. I have to keep studying and I can't have you distracting me.
+                      </p>
+                      <p>She laughed and put the phone away, and felt, beneath the exhaustion and the relief, a quiet gratitude that he was someone she had wanted to tell first.
+                      </p>
+                      <P style="text-align: center;">* * *
+                      </p>
+                      <p>The BUET results were a different kind of waiting.
+                      </p>
+                      <p>The notification would come at night — everyone knew this, it was the particular cruelty of the BUET admission system, that it made you lose sleep literally as well as figuratively. Nafis had known this going in. He had told himself he would go to bed at a reasonable hour and check in the morning.
+                      </p>
+                      <p>He was still awake at half past one, staring at the ceiling of his room.
+                      </p>
+                      <p>His phone was on the desk. He had turned the screen down so the light wouldn't keep him alert, which had not worked at all. At ten minutes to two he gave up, sat up, and picked it up.
+                      </p>
+                      <p>The results portal was already being hammered by thousands of simultaneous visitors. It took four attempts before the page loaded.
+                      </p>
+                      <p>He read his result at 2:03 in the morning, alone in his room in the January dark.
+                      </p>
+                      <p>73rd position. Bangladesh University of Engineering and Technology.
+                      </p>
+                      <p>He sat very still for a moment. Then he put his face in his hands — not from distress but from the overwhelming, slightly disorienting sensation of something enormous becoming real. He stayed like that for a while, just breathing, letting it settle.
+                      </p>                      
+                      <p>Then he looked at his phone. It was past two in the morning. He should not wake her.
+                      </p>
+                      <p>He opened their chat anyway, typed: 73rd position. BUET. Sorry it's 2AM, I couldn't wait.
+                      </p>
+                      <p>He stared at the message for a moment, then sent it, telling himself she was almost certainly asleep and would see it in the morning.
+                      </p>
+                      <p>The reply came in forty seconds.
+                      </p>
+                      <p>I was awake waiting. I knew you'd get it.
+                      </p>
+                      <p>73rd position in the entire country, Nafis.
+                      </p>
+                      <p>Go sleep now. You've earned it.
+                      </p>                      
+                      <p>He smiled at the phone in the dark, in the particular way a person smiles when no one is watching and there is no reason to manage the expression at all.
+                      </p>                      
+                      <p>Goodnight, he wrote.
+                      </p>
+                      <p>Goodnight, she wrote back. I'm proud of you.
+                      </p>
+                      <p>He put the phone down and lay back and looked at the ceiling and felt, in the quiet of two in the morning, that everything was exactly as it should be.
+                      </p>                      
+                      <P style="text-align: center;">* * *
+                      </p>
+                      <p>They celebrated that evening at the same worn café in Dhanmondi, which had quietly become theirs in the way places become yours without a formal declaration — through repetition, through the accumulation of conversations that mattered. The same ceiling fan. The same mismatched bookshelves. The tea was better than the biscuits, as always.
+                      </p>
+                      <p>They talked for three hours. About the future — their futures, the separate trajectories of medicine and engineering that would keep them on different campuses, in different rhythms, with different pressures. They talked about it with the practical honesty of two people who had built something real and intended to protect it intelligently rather than sentimentally.
+                      </p>
+                      <p>"It'll be harder," Nafis said. Not a complaint — simply a fact, offered without drama.
+                      </p>
+                      <p>"Yes," Amaya agreed. "Most things worth keeping are."
+                      </p>
+                      <p>He looked at her across the table. In the fourteen months since the stairwell landing, she had watched him become steadier in ways she hadn't expected — not changed, but settled, the way wood settles when it's in the right place. He had learned her rhythms: when to push and when to wait, when she needed the conversation and when she needed the silence beside someone who understood her. She had learned his: the restlessness that preceded his best ideas, the way he went quiet when something mattered more than he wanted to show, the guitar melody that surfaced when he was thinking through something he hadn't found words for yet.
+                      </p>
+                      <p>They had argued. They had misunderstood each other and then, painstakingly, understood each other better. There had been one bad week in March when she had pulled back further than she'd intended, and he had given her the space and then, carefully, told her the truth about how it had felt, and she had listened and they had found their way back. It had not been easy. It had been worth it.
+                      </p>
+                      <p>"We'll manage," she said.
+                      </p>
+                      <p>"We'll manage," he agreed.
+                      </p>
+                      <p>He reached across the table and covered her hand with his, the same gesture from the stairwell — unhurried, a question before it was a statement. She turned her hand over and held his, the same answer she had been giving for over a year.
+                      </p>
+                      <P style="text-align: center;">* * *
+                      </p>
+                      <p>They told their families six months into university, on a Sunday afternoon that arranged itself with the unplanned symmetry of things that are meant to happen. Nafis' family had come to Dhaka for a visit; Amaya's mother was in the city for an appointment. They did not stage it — there was no strategic planning, no rehearsed speech. It simply became the right moment, the way right moments do, and they stepped into it.
+                      </p>
+                      <p>Both families, as it turned out, had already suspected.
+                      </p>
+                      <p>Amaya's mother had known since she had heard Amaya laugh at something on her phone one evening in a way she hadn't laughed in a long time — since before Torongo, since before the careful year that had followed. She had not said anything. She had simply waited, and watched her daughter come back to herself, and been grateful.
+                      </p>                      
+                      <p>Nafis' parents approved with the warmth of people who had watched their son become, over the past year, quietly and inexplicably more settled. His father, who had wanted him in medicine and had conceded the point about engineering, proved once again that he could concede gracefully when it mattered.
+                      </p>
+                      <p>The families met. Tea was made. There was an hour of the slightly formal conversation that precedes all real conversations, and then that fell away too, and by the end of the afternoon something had shifted — the two separate worlds that Amaya and Nafis had each come from had begun, carefully, to make room for each other.
+                      </p>
+                      <p>On the drive home, Amaya sat in the back of a rickshaw with the city moving past her in the late afternoon light and thought about the Boi Mela — the crowd, the autograph line, the conversation that had begun as an irritation and become something she could not now imagine her life without. She thought about the debate hall, and the stairwell, and the café, and the Rabindra Jayanti night when a voice had stopped her mid-step and something had shifted without permission.
+                      </p>
+                      <p>She thought about the girl she had been then — careful, contained, fluent in the language of exits. Still herself, but armored in ways she had not yet learned to question.
+                      </p>
+                      <p>She thought about who she was now.
+                      </p>
+                      <p>She opened her notebook — she always had it — and wrote four lines, quickly, before the thought dissolved. She looked at them. Then she closed the notebook and held it in her lap and watched the city and felt, with a clarity that required no decoration, that she was exactly where she was supposed to be.
+                      </p>
+                      <P style="text-align: center;">* * *
+                      </p>
+                      <p>The engagement ceremony was held on a quiet evening in late spring, in the courtyard of Amaya's aunt's house in Mirpur — strung with lights, filled with the smell of flowers and food and the specific warmth of two families becoming one. It was not a large affair. Both of them had wanted something real over something spectacular, and the people who knew them well had understood this without being asked.
+                      </p>                      
+                      <p>When Nafis put the ring on her finger, he looked at her with an expression she had come to know as the one he kept for things that mattered most — quiet, entirely unperformed, the public face completely set aside. She had learned that this expression was his most honest one. She had learned that she was one of the few people who ever saw it.
+                      </p>
+                      <p>She looked back at him steadily, the way she had looked at him across an autograph line on a February afternoon that had seemed, at the time, like no particular kind of day.
+                      </p>
+                      <p>"Still scared?" he said, very quietly, beneath the noise of the room.
+                      </p>
+                      <p>She considered this with the seriousness she gave to real questions. "Sometimes," she said. "Less than before."
+                      </p>
+                      <p>"That's enough for me."
+                      </p>
+                      <p>"I know," she said. "That's why I'm here."
+                      </p>
+                      <P style="text-align: center;">* * *
+                      </p>
+                      <p>They married two years later, in the early winter, when the Dhaka air had turned cool and the city felt briefly like a gentler version of itself. The ceremony was everything they had chosen together — small details that each carried meaning, a song performed live that Amaya had picked and Nafis had practiced for three weeks without telling her, poems read by people who knew what poetry cost and what it was worth.
+                      </p>
+                      <p>In the years that followed they built a life with the same quality they had brought to everything else — with attention, with honesty, with the willingness to do the harder thing when the harder thing was right. There were ordinary days and difficult ones, seasons of distance and seasons of nearness. There were arguments that required days to resolve and silences that required nothing but patience. There was the slow, accumulating knowledge of another person that is different from any other kind of knowledge — the kind that doesn't arrive all at once but builds, quietly and without fanfare, into something stronger than either of you expected.
+                      </p>
+                      <p>Amaya kept writing. Her first collection of poems was published six years after the Boi Mela, and in the acknowledgements she wrote simply: for the person who told me not to fix what made the voice honest. Nafis read this and said nothing, which was the right response, and she loved him for knowing it.
+                      </p>
+                      <p>He kept singing. Not publicly, mostly — at home, in the evenings, sometimes with his eyes half-closed in the way that meant he had forgotten he had an audience. She always stopped what she was doing when she heard it. Not visibly. Just internally, the small private pause of someone who recognizes something that belongs to them.
+                      </p>
+                      <p>You will remain, in silence, in the depths of my being.
+                      </p>                      
+                      <p>She had thought, on that warm April night at the DU open stage, that it was a song about absence — about someone who had left and continued to live in memory. She understood it differently now. It was not about absence at all. It was about the particular presence of a person who has become so woven into the fabric of your days that the boundary between them and you is no longer entirely clear.
+                      </p>
+                      <p>She understood it, now, from the inside.
+                      </p>
+                      <P style="text-align: center;">* * *
+                      </p>
+                      <p>And so the story of Nafis and Amaya — which had begun with a collision in an autograph line, with sharp words and sharper minds, with two people who had recognized something in each other before they were ready to name it — came to rest not in a single moment of arrival but in the ongoing, unglamorous, irreplaceable work of two people choosing each other, again and again, in all the ordinary days that make up a life.
+                      </p>
+                      <p>It was not a perfect story. It was better than perfect.
+                      </p>
+                      <p>It was true.
+                    </p><br>
+                    <h4 style="font-style: italic; text-align: center;">— THE END —</h4><br>
+                    </div>
+                  <!-- Chapter 7 Ends -->
+
+                  <div class="chapter-nav">
+                    <a href="chapter-6.html">← Previous</a>
+                    <div></div>
+                  </div>
+
+                  <a href="../post1.html" class="back-link">
+                    ← Back to Story
+                  </a>
+
+                </div>
+              <!-- Story Ends-->
+            </div>
+            </a>
+          </div>
+
+          <a class="btn btn-outline-dark btn-pill mt-3" href="../../blog.html">Back to Blog</a>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5 footer-grid">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="footer-brand">
+            <a class="footer-brand-name" href="../../index.html#page-top">Shahriyer Sayem</a>
+            <p class="footer-subtitle">Engineering student exploring design, technology, and visual communication.</p>
+            <p class="footer-nickname">Also known as Utso.</p>
+            <ul class="footer-social-list" aria-label="Social links">
+              <li><a href="https://www.linkedin.com/in/shahriyer-sayem-0815a93b0/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>
+              <li><a href="https://github.com/being-utso" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="bi bi-github" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.instagram.com/being_utso/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.facebook.com/utso.sayem" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="mailto:s.sayemx@gmail.com" aria-label="Email Shahriyer Sayem"><i class="bi bi-envelope-fill" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-link-list">
+            <li><a class="footer-link" href="../../index.html">Home</a></li>
+            <li><a class="footer-link" href="../../portfolio.html">Portfolio</a></li>
+            <li><a class="footer-link" href="../../blog.html">Blog</a></li>
+            <li><a class="footer-link" href="../../about.html">About</a></li>
+            <li><a class="footer-link" href="../../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h3 class="footer-title">Portfolio Categories</h3>
+          <ul class="footer-link-list">
+            <li><a class="footer-link" href="../../portfolio.html?filter=graphic-design">Graphic Design</a></li>
+            <li><a class="footer-link" href="../../portfolio.html?filter=photography">Photography</a></li>
+            <li><a class="footer-link" href="../../portfolio.html?filter=video-production">Video Production</a></li>
+            <li><a class="footer-link" href="../../portfolio.html?filter=web-design">Web Design</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h3 class="footer-title">Open To</h3>
+          <div class="footer-tags" aria-label="Open to collaboration areas">
+            <span class="footer-tag">Mentoring</span>
+            <span class="footer-tag">Social Works</span>
+            <span class="footer-tag">Graphic Design</span>
+            <span class="footer-tag">Creative Collaboration</span>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <p class="footer-copy">&#169; 2026 Shahriyer Sayem</p>
+        <div class="footer-bottom-right">
+          <p class="footer-credit">Built and designed by Shahriyer Sayem</p>
+          <button type="button" class="footer-top-btn" id="footer-back-to-top" aria-label="Back to top">
+            <i class="bi bi-arrow-up" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="../../js/script.js"></script>
+  <script>
+  const text = document.getElementById("chapterContent").innerText;
+  const words = text.split(/\s+/).length;
+  const time = Math.ceil(words / 200);
+
+  document.getElementById("readingTime").innerText =
+    "Estimated reading time: " + time + " min";
+
+  window.addEventListener("scroll", () => {
+    const winScroll = document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("progressBar").style.width = scrolled + "%";
+  });
+</script>
+</body>
+</html>
+
+
+
+
+

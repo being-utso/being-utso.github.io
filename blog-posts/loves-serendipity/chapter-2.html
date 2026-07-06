@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lessons From My First Design Project | Shahriyer Sayem</title>
+  <meta name="description" content="Lessons From My First Design Project - blog post by Shahriyer Sayem.">
+  <meta property="og:title" content="Lessons From My First Design Project | Shahriyer Sayem">
+  <meta property="og:description" content="Lessons From My First Design Project - blog post by Shahriyer Sayem.">
+  <meta property="og:image" content="../../images/portrait.svg">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: #7aa2ff;
+      width: 0%;
+      z-index: 999;
+    }
+
+    .chapter-container {
+      max-width: 700px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .chapter-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .chapter-number {
+      font-size: 13px;
+      opacity: 0.6;
+    }
+
+    .chapter-title {
+      font-size: 32px;
+      margin: 10px 0;
+      font-weight: 600;
+    }
+
+    .reading-time {
+      font-size: 13px;
+      opacity: 0.6;
+    }
+
+    .chapter-content {
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    .chapter-content p {
+      margin-bottom: 20px;
+    }
+
+    .chapter-content p:first-child::first-letter {
+      font-size: 40px;
+      font-weight: 600;
+      float: left;
+      margin-right: 8px;
+    }
+
+    .chapter-nav {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .chapter-nav a {
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      background: rgba(255,255,255,0.06);
+      transition: 0.2s;
+    }
+
+    .chapter-nav a:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      opacity: 0.6;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body class="dark-mode" id="page-top">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top site-navbar">
+      <div class="container">
+        <a class="navbar-brand logo-text" href="../../index.html">Shahriyer Sayem</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="../../blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../contact.html">Contact</a></li>
+          </ul>
+          <div class="theme-toggle-wrapper ms-lg-4 mt-3 mt-lg-0">
+            <input type="checkbox" id="theme-toggle" class="theme-toggle-input" aria-label="Switch to light mode">
+            <label for="theme-toggle" class="theme-toggle-slider" aria-hidden="true">
+              <span class="theme-toggle-moon">🌙</span>
+              <span class="theme-toggle-sun">☀</span>
+              <span class="theme-toggle-knob"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <p class="hero-label">Personal Blog</p>
+        <h3>Love’s Serendipity • Chapter 2</h3>
+        <h1>The Space Between Words</h1>
+        <p class="banner-lead">An argument turns into something deeper than competition.</p>
+      </div>
+    </section>
+
+    <section class="py-section">
+      <div class="container">
+        <article class="info-card">
+          <p class="card-label">Personal Blog • March 2, 2026</p>
+          <img class="img-fluid mb-4" src="../../images/chapter2.png" alt="Design project process cover image" loading="lazy" decoding="async">
+          
+          <div class="story-intro">
+            <div class="story-container">
+              <!-- Story Content -->
+              <div class="progress-bar" id="progressBar"></div>
+
+                <div class="chapter-container">
+
+                  <div class="chapter-header">
+                    <p class="chapter-number">Chapter 2 of 7</p>
+                    <h1 class="chapter-title">The Space Between Words</h1>
+                    <p class="reading-time" id="readingTime">Estimated reading time: --</p>
+                  </div>
+
+
+                  <!-- Chapter 2 Starts -->
+                  <div class="chapter-content" id="chapterContent">
+
+
+                      <p>
+                        The inter-college debate competition at Dhaka's British Council auditorium was the kind of event that drew crowds for the wrong reasons. Officially, people came for the intellectual discourse. In reality, they came to watch someone get demolished.
+                      </p>
+
+                      <p>
+                        Nafis knew this. He had competed in three of these before, and he had learned early that the audience did not remember arguments — they remembered moments. The precise second when a debater's composure cracked, or when a single, perfectly timed sentence unraveled everything the opposition had built. That was what people talked about afterward. That was what he came to deliver.
+                      </p>
+
+                      <p>
+                        What he did not know, as he sat in the green room reviewing his notes with the focused calm of someone who had done this many times, was that Viqarunnisa Noon College had changed their first speaker at the last minute.
+                      </p>
+
+                      <p>
+                        He found out the way everyone else did — from the emcee's announcement, crisp and indifferent, as the competition began.
+                      </p>
+
+                      <p>
+                        "Representing Viqarunnisa Noon College, first speaker — Amaya Rahman."
+                      </p>
+
+                      <p>
+                        Nafis looked up from his notes.
+                      </p>
+
+                      <p>
+                        She walked onto the stage the way she had stood in that line at the Boi Mela — like the room had been rearranged to accommodate her without her having asked. She was in a deep blue salwar kameez, her notes held loosely at her side as though she barely needed them, her expression composed and entirely unreadable.
+                      </p>
+
+                      <p>
+                        She did not see him. Or if she did, she gave no indication.
+                      </p>
+
+                      <p>
+                        The motion that afternoon was one Nafis could have argued in his sleep: This House believes that literature shapes society more than politics. He was arguing for. Amaya, it turned out, was arguing against.
+                      </p>
+
+                      <p>
+                        She spoke first.
+                      </p>
+                      
+                      <p>
+                        Nafis had expected competence. What he had not expected was the way she argued — not with the rehearsed precision of someone who had memorized a structure, but with the restless, gripping logic of someone who actually believed what she was saying. She moved through her points with an ease that bordered on dangerous, and twice she said something that made the audience lean forward almost imperceptibly, the way people do when they feel the ground shift beneath an argument.
+                      </p>
+                      
+                      <p>
+                        When it was Nafis' turn, he stood up, buttoned his jacket once, and walked to the podium. He allowed himself one glance at the opposition bench. Amaya was watching him with an expression of careful neutrality that told him, unmistakably, that she had recognized him the moment his name had been called.
+                      </p>
+                      
+                      <p> 
+                        Good, he thought. Let her.
+                      </p>
+                      
+                      <p> 
+                      He spoke well. He always spoke well. But somewhere in the middle of his rebuttal — where he was supposed to be systematically dismantling her third point — he found himself genuinely engaging with it instead, because it was better constructed than he had anticipated, and he was not the kind of person who could pretend otherwise, even at a competition podium. He countered it honestly, without the dismissiveness he had planned, and the argument became something sharper for it.
+                      </p>
+                      
+                      <p>
+                      Back and forth it went — through the structured rounds, through the rebuttals, through the points of information that were supposed to be brief and became, between the two of them, anything but. The other speakers on both teams did their parts competently enough. But the room had quietly decided, somewhere around the halfway mark, where the real competition was.
+                      </p>
+                      
+                      <p>
+                      When it was over, the judges withdrew. The auditorium hummed with conversation. Nafis stood with his teammates near the side of the hall, accepting congratulations he didn't feel entirely entitled to yet, his mind still turning over one of her arguments that he hadn't quite answered to his own satisfaction.
+                      </p>
+                      
+                      <p>
+                      He didn't go looking for her. He told himself that clearly. He was simply walking toward the water dispenser near the back of the hall, and she happened to be standing not far from it, alone for a moment while her teammates spoke to a faculty judge nearby.
+                      </p>
+                      
+                      <p>
+                      She noticed him approach and said nothing. Neither did he, for a moment.
+                      </p>
+                      
+                      <p>
+                      "The bit about policy reform," he said finally. "The Bangladesh example. Where did you pull that?"
+                      </p>
+                      
+                      <p>
+                      She looked at him with faint surprise — not at the question, but perhaps at the directness of it, the absence of any preamble. "Research," she said. "Is that a serious question or are you looking for a concession?"
+                      </p>
+                      
+                      <p>
+                      "Serious question."
+                      </p>
+                      
+                      <p>
+                      A pause. She seemed to evaluate this. "There's a paper by a professor at DU. Political economy journal, two years ago. It's not widely cited but it should be."
+                      </p>
+                      
+                      <p>
+                      "You read political economy journals."
+                      </p>
+                      
+                      <p>
+                      "I read things that are useful," she said. "Today it was useful."
+                      </p>
+                      
+                      <p>
+                      Nafis looked at her for a moment. There was something quietly maddening about the way she existed in spaces — as though she had already considered the room and found it adequate, no more, no less. "You changed their speaker order," he said. "You weren't supposed to go first."
+                      </p>
+                      
+                      <p>
+                      "Nasrin got sick this morning." She glanced at him. "Does it matter?"
+                      </p>
+                      
+                      <p>
+                      "It changed how I prepared."
+                      </p>
+                      
+                      <p>
+                      "That sounds like a you problem."
+                      </p>
+                      
+                      <p>
+                      Before he could respond, the emcee's voice cut through the hall — the judges had returned. They both turned toward the stage without another word, drifting back to their respective sides of the room as naturally as though the conversation had simply reached its end and not been severed by something external and, again, entirely unfair.
+                      </p>
+                      
+                      <p>
+                      Notre Dame College won by a narrow margin.
+                      </p>
+                      
+                      <p>
+                      Nafis stood with his team as the result was read out, accepting the moment with the quiet satisfaction of someone who had worked for it. But when the applause settled and he glanced across the hall, he found Amaya already in conversation with her coach, her posture straight, her expression composed — not the composure of someone concealing disappointment, but of someone who had already moved past it and was thinking about the next thing.
+                      </p>
+                      
+                      <p>
+                      He watched her for three seconds longer than he meant to.
+                      </p>
+                      
+                      <p>
+                      She didn't look back. Or if she did, it was after he had already turned away, and neither of them would ever quite be certain.
+                      </p>
+                      
+                      <p>
+                      They did not speak again that evening. They left the British Council through different doors, into the same February night, the city loud and indifferent around them.
+                      </p>
+
+                      <p> 
+                      But something had changed — not softened, not resolved, but changed, the way pressure changes before a storm. They had seen each other now in a different kind of light: not across a moment of accident or chance, but head to head, at full capacity, with nothing to hide behind.
+                      </p>
+
+                      <p>
+                      And that, it turned out, was far more unsettling than anything that had come before.
+                    </p>
+
+
+                    </div>
+                  <!-- Chapter 2 Ends -->
+
+                  <div class="chapter-nav">
+                    <a href="chapter-1.html">← Previous</a>
+                    <div></div>
+                    <a href="chapter-3.html">Next →</a>
+                  </div>
+
+                  <a href="../post1.html" class="back-link">
+                    ← Back to Story
+                  </a>
+
+                </div>
+              <!-- Story Ends-->
+            </div>
+            </a>
+          </div>
+
+          <a class="btn btn-outline-dark btn-pill mt-3" href="../../blog.html">Back to Blog</a>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5 footer-grid">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="footer-brand">
+            <a class="footer-brand-name" href="../../index.html#page-top">Shahriyer Sayem</a>
+            <p class="footer-subtitle">Engineering student exploring design, technology, and visual communication.</p>
+            <p class="footer-nickname">Also known as Utso.</p>
+            <ul class="footer-social-list" aria-label="Social links">
+              <li><a href="https://www.linkedin.com/in/shahriyer-sayem-0815a93b0/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>
+              <li><a href="https://github.com/being-utso" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="bi bi-github" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.instagram.com/being_utso/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.facebook.com/utso.sayem" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="mailto:s.sayemx@gmail.com" aria-label="Email Shahriyer Sayem"><i class="bi bi-envelope-fill" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-link-list">
+            <li><a class="footer-link" href="../../index.html">Home</a></li>
+            <li><a class="footer-link" href="../../portfolio.html">Portfolio</a></li>
+            <li><a class="footer-link" href="../../blog.html">Blog</a></li>
+            <li><a class="footer-link" href="../../about.html">About</a></li>
+            <li><a class="footer-link" href="../../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h3 class="footer-title">Portfolio Categories</h3>
+          <ul class="footer-link-list">
+            <li><a class="footer-link" href="../../portfolio.html?filter=graphic-design">Graphic Design</a></li>
+            <li><a class="footer-link" href="../../portfolio.html?filter=photography">Photography</a></li>
+            <li><a class="footer-link" href="../../portfolio.html?filter=video-production">Video Production</a></li>
+            <li><a class="footer-link" href="../../portfolio.html?filter=web-design">Web Design</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h3 class="footer-title">Open To</h3>
+          <div class="footer-tags" aria-label="Open to collaboration areas">
+            <span class="footer-tag">Mentoring</span>
+            <span class="footer-tag">Social Works</span>
+            <span class="footer-tag">Graphic Design</span>
+            <span class="footer-tag">Creative Collaboration</span>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <p class="footer-copy">&#169; 2026 Shahriyer Sayem</p>
+        <div class="footer-bottom-right">
+          <p class="footer-credit">Built and designed by Shahriyer Sayem</p>
+          <button type="button" class="footer-top-btn" id="footer-back-to-top" aria-label="Back to top">
+            <i class="bi bi-arrow-up" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="../../js/script.js"></script>
+  <script>
+  const text = document.getElementById("chapterContent").innerText;
+  const words = text.split(/\s+/).length;
+  const time = Math.ceil(words / 200);
+
+  document.getElementById("readingTime").innerText =
+    "Estimated reading time: " + time + " min";
+
+  window.addEventListener("scroll", () => {
+    const winScroll = document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("progressBar").style.width = scrolled + "%";
+  });
+</script>
+</body>
+</html>
+
+
+
+
+

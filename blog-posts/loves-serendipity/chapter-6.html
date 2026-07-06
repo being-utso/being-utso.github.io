@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lessons From My First Design Project | Shahriyer Sayem</title>
+  <meta name="description" content="Lessons From My First Design Project - blog post by Shahriyer Sayem.">
+  <meta property="og:title" content="Lessons From My First Design Project | Shahriyer Sayem">
+  <meta property="og:description" content="Lessons From My First Design Project - blog post by Shahriyer Sayem.">
+  <meta property="og:image" content="../../images/portrait.svg">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: #7aa2ff;
+      width: 0%;
+      z-index: 999;
+    }
+
+    .chapter-container {
+      max-width: 700px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .chapter-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .chapter-number {
+      font-size: 13px;
+      opacity: 0.6;
+    }
+
+    .chapter-title {
+      font-size: 32px;
+      margin: 10px 0;
+      font-weight: 600;
+    }
+
+    .reading-time {
+      font-size: 13px;
+      opacity: 0.6;
+    }
+
+    .chapter-content {
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    .chapter-content p {
+      margin-bottom: 20px;
+    }
+
+    .chapter-content p:first-child::first-letter {
+      font-size: 40px;
+      font-weight: 600;
+      float: left;
+      margin-right: 8px;
+    }
+
+    .chapter-nav {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .chapter-nav a {
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      background: rgba(255,255,255,0.06);
+      transition: 0.2s;
+    }
+
+    .chapter-nav a:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      opacity: 0.6;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body class="dark-mode" id="page-top">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top site-navbar">
+      <div class="container">
+        <a class="navbar-brand logo-text" href="../../index.html">Shahriyer Sayem</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="../../blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../contact.html">Contact</a></li>
+          </ul>
+          <div class="theme-toggle-wrapper ms-lg-4 mt-3 mt-lg-0">
+            <input type="checkbox" id="theme-toggle" class="theme-toggle-input" aria-label="Switch to light mode">
+            <label for="theme-toggle" class="theme-toggle-slider" aria-hidden="true">
+              <span class="theme-toggle-moon">🌙</span>
+              <span class="theme-toggle-sun">☀</span>
+              <span class="theme-toggle-knob"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <p class="hero-label">Personal Blog</p>
+        <h3>Love’s Serendipity • Chapter 6</h3>
+        <h1>Confession</h1>
+        <p class="banner-lead">Truth steps forward, even when fear refuses to leave.</p>
+      </div>
+    </section>
+
+    <section class="py-section">
+      <div class="container">
+        <article class="info-card">
+          <p class="card-label">Personal Blog • March 2, 2026</p>
+          <img class="img-fluid mb-4" src="../../images/chapter6.png" alt="Design project process cover image" loading="lazy" decoding="async">
+          
+          <div class="story-intro">
+            <div class="story-container">
+              <!-- Story Content -->
+              <div class="progress-bar" id="progressBar"></div>
+
+                <div class="chapter-container">
+
+                  <div class="chapter-header">
+                    <p class="chapter-number">Chapter 6 of 7</p>
+                    <h1 class="chapter-title">Confession</h1>
+                    <p class="reading-time" id="readingTime">Estimated reading time: --</p>
+                  </div>
+
+
+                  <!-- Chapter 6 Starts -->
+                  <div class="chapter-content" id="chapterContent">
+
+                    <p>
+                      The weeks that followed the café were neither one thing nor another.
+                    </p>
+                    <p>They existed in a space that had no clean name — not friendship exactly, not something more, but a particular in-between that both of them inhabited with a care that bordered on deliberate. They met three more times, always in the same unhurried way, always with the same quality of conversation that felt like thinking out loud in front of someone you trusted not to use it against you. They texted daily without having agreed to. He sent her things he found interesting — an article, a song, a photograph of a sentence he had underlined in a book. She responded with the same, and occasionally with something she had written herself, which was not something she did lightly and both of them understood this without saying it.
+                      </p>
+                      <p>She was not ready. She knew she was not ready. The knowledge sat in her quietly and she respected it the way she had learned to respect difficult truths — not by fighting them, but by giving them room.
+                      </p>
+                      <p>What she had not accounted for was that the not-readiness would become, gradually and without announcement, its own kind of unbearable.
+                      </p>
+                      <P style="text-align: center;">* * *
+                      </p>
+                      <p>It was Priya's idea, which meant Amaya had only herself to blame for agreeing to it.
+                      </p>
+                      <p>A small gathering at a mutual friend's flat in Lalmatia — eight or nine people, an informal thing, the kind of evening that assembles itself without much planning and ends up lasting longer than anyone intended. Amaya had said yes on a Thursday when she was in a good mood and had spent most of Friday regretting it. By Saturday evening she had made her peace with it and arrived at seven with Priya and a packet of mishti from the shop near their college.
+                      </p>
+                      <p>Nafis was already there.
+                      </p>
+                      <p>She had not known he would be there. She looked at Priya, who looked back at her with an expression of absolute innocence so precisely calibrated that it was immediately incriminating.
+                      </p>
+                      <p>"You knew," Amaya said, very quietly.
+                      </p>
+                      <p>"I may have mentioned the gathering to Rafi," Priya said. "Who may have mentioned it to Nafis. These things happen."
+                      </p>
+                      <p>"These things don't just happen, Priya."
+                      </p>
+                      <p>"Enjoy the party," Priya said, and walked away toward the food.
+                      </p>
+                      <P style="text-align: center;">* * *
+                      </p>
+                      <p>For the first hour, Amaya managed it well. She was good in rooms — she could hold a conversation, navigate a gathering, move through an evening without appearing to be tracking someone else's position in it. She talked to people she knew. She ate. She laughed at something someone said on the other side of the room and did not look up to see whether Nafis had heard it.
+                      </p>
+                      <p>He was doing the same thing, she suspected. They were both very good at pretending not to notice each other, which required, of course, that they notice each other constantly.
+                      </p>
+                      <p>It was during the second hour that someone suggested a game — the kind of low-stakes group game that surfaces at gatherings like this, harmless and a little silly, designed to generate conversation. This one involved sharing something true about yourself that the room didn't know, and then guessing who among the group had shared what.
+                      </p>
+                      <p>Amaya participated with the mild tolerance of someone who found these things slightly beneath her but was willing to be a good guest. She wrote something small and safe on her slip of paper — that she had once memorized an entire Jibanananda Das collection because of a bet — and folded it.
+                      </p>
+                      <p>When the slips were read aloud, one stopped the room.
+                      </p>
+                      <p>I have been in love with someone in this room for longer than I have been willing to admit, and I am tired of pretending otherwise.
+                      </p>
+                      <p>The group fell briefly, collectively quiet — the way people do when something unexpectedly real surfaces in an unreal setting. Then came the laughter, the questions, the guessing. Amaya kept her expression composed and looked at her hands and did not look across the room.
+                      </p>
+                      <p>She did not need to guess. She knew the handwriting.
+                      </p>
+                      <p>She had seen it in a caption on an Instagram post three years old, in the particular loop of certain letters — the same handwriting that had signed a debate register she had glimpsed over his shoulder at the British Council. She knew it the way you know the shape of something you have looked at more than you intended to.
+                      </p>
+                      <p>The room guessed wrong twice, and then someone pointed at Nafis, and he smiled — a different smile from any she had seen from him before, slightly unsteady at the edges, more exposed than he probably intended — and said, simply, "Yes."
+                      </p>
+                      <p>The room erupted. Questions, laughter, the inevitable escalation of everyone wanting to know who. Nafis deflected with the easy charm he kept for public consumption, saying nothing specific, and the moment passed and the game moved on and the evening continued.
+                      </p>
+                      <p>But across the room, for one unguarded second, he had looked at her.
+                      </p>
+                      <p>And she had looked back.
+                      </p>
+                      <P style="text-align: center;">* * *
+                      </p>
+                      <p>She found her coat at half past ten and told Priya she was leaving. Priya, to her credit, simply hugged her and said nothing, which was exactly right.
+                      </p>
+                      <p>The stairwell of the building was narrow and lit by a single fluorescent tube that flickered at irregular intervals. Amaya was halfway down when she heard the door above her open and close, and then footsteps — unhurried, deliberate, the pace of someone who was not chasing but had decided.
+                      </p>
+                      <p>She stopped on the landing.
+                      </p>
+                      <p>He came around the turn of the stairs and stopped too, a few steps above her, so that they were almost level. The fluorescent light flickered once and held.
+                      </p>
+                      <p>Neither of them spoke immediately. The building settled around them, a muffled burst of laughter from the flat above, the distant sound of a car horn from the street below. In between those things, silence — full and waiting and honest.
+                      </p>
+                      <p>"You knew," he said. "About the slip."
+                      </p>
+
+                      <p>"
+                        Yes."
+                      </p>
+                      <p>"How long have you known? Generally."
+                      </p>
+                      <p>She considered giving him a careful answer — something measured, something that preserved a little more distance. She looked at him, at the slightly unsteady quality that had not entirely left his expression since the game, and decided she was done with careful answers.
+                      </p>
+                      <p>"Since the Rabindra Jayanti," she said. "Maybe before."
+                      </p>
+                      <p>Something moved across his face — quiet and significant. "And?"
+                      </p>
+                      <p>This was the moment. She recognized it the way you recognize a threshold — not dramatic, not announced, just the place where the floor of one room ends and another begins. She had been standing at it for weeks, telling herself she needed more time, more certainty, more evidence that this time would be different.
+                      </p>
+                      <p>She thought about the café. The stale biscuits. I'm not in a hurry.
+                      </p>
+                      <p>She thought about Torongo and the seven months and the slow, careful work of deciding not to be unmade. She had done that work. She had earned the other side of it.
+                      </p>
+                      <p>She thought about the voice in the dark, singing Tagore like he meant it, and the way a song about quiet, persistent presence had lodged itself somewhere in her chest and refused to leave.
+                      </p>
+                      <p>"I'm scared," she said. It came out plainly, without apology, the way the truest things do when you finally stop managing them. "I want you to know that before anything else. I'm scared and I have reasons for being scared that have nothing to do with you."
+                      </p>
+                      <p>"I know," he said. "You told me."
+                      </p>
+                      <p>"I'm telling you again. So that it's said properly."
+                      </p>
+                      <p>He nodded. He did not rush her. He stood on the stairs in the flickering light and waited, which was, she had come to understand, one of the things he did best.
+                      </p>
+                      <p>"I don't know how to do this without being careful," she said. "That's not going to change. I'm going to be careful, probably at inconvenient moments, probably in ways that are frustrating. I can't promise you I won't pull back sometimes."
+                      </p>
+                      <p>"I'm not asking for a promise," he said. "I'm asking if you want to try."
+                      </p>
+                      <p>Amaya looked at him for a long moment. She catalogued him the way she catalogued things she intended to keep — the steadiness of him, the way he had sat with her difficult silences and not tried to fill them, the voice that sang Tagore without self-consciousness, the handwriting she had recognized before she was ready to admit what the recognition meant.
+                      </p>
+                      <p>"Yes," she said. "I want to try."
+                      </p>
+                      <p>The word landed between them quietly, without fanfare — which was right, she thought. The real things rarely announced themselves. They simply became true.
+                      </p>
+                      <p>He came down the remaining steps to the landing and stood in front of her, close enough that she could see the slight exhale of relief he hadn't entirely managed to conceal, which undid her more than any amount of composure would have.
+                      </p>
+                      <p>"Okay," he said, softly.
+                      </p>
+                      <p>"Okay," she agreed.
+                      </p>
+                      <p>He did not reach for her hand immediately. He waited — one more moment, one last courtesy to the carefulness she had asked him to understand — and then he held out his hand, palm up, an offering rather than a claim. She looked at it. Then she placed her hand in his, and he closed his fingers gently around hers, and they stood like that in the stairwell while the light flickered above them and the city moved through its indifferent Saturday night outside.
+                      </p>
+                      <p>It was not a grand gesture. It was not the kind of moment that looked like anything from the outside — two people on a landing, holding hands under a failing fluorescent light. But Amaya, who had spent a year learning the difference between the performed and the true, knew exactly what it was.
+                      </p>
+                      <p>It was the beginning of something she intended to keep.
+                    </p>
+                    </div>
+                  <!-- Chapter 6 Ends -->
+
+                  <div class="chapter-nav">
+                    <a href="chapter-5.html">← Previous</a>
+                    <div></div>
+                    <a href="chapter-7.html">Next →</a>
+                  </div>
+
+                  <a href="../post1.html" class="back-link">
+                    ← Back to Story
+                  </a>
+
+                </div>
+              <!-- Story Ends-->
+            </div>
+            </a>
+          </div>
+
+          <a class="btn btn-outline-dark btn-pill mt-3" href="../../blog.html">Back to Blog</a>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5 footer-grid">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="footer-brand">
+            <a class="footer-brand-name" href="../../index.html#page-top">Shahriyer Sayem</a>
+            <p class="footer-subtitle">Engineering student exploring design, technology, and visual communication.</p>
+            <p class="footer-nickname">Also known as Utso.</p>
+            <ul class="footer-social-list" aria-label="Social links">
+              <li><a href="https://www.linkedin.com/in/shahriyer-sayem-0815a93b0/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>
+              <li><a href="https://github.com/being-utso" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="bi bi-github" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.instagram.com/being_utso/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.facebook.com/utso.sayem" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="mailto:s.sayemx@gmail.com" aria-label="Email Shahriyer Sayem"><i class="bi bi-envelope-fill" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-link-list">
+            <li><a class="footer-link" href="../../index.html">Home</a></li>
+            <li><a class="footer-link" href="../../portfolio.html">Portfolio</a></li>
+            <li><a class="footer-link" href="../../blog.html">Blog</a></li>
+            <li><a class="footer-link" href="../../about.html">About</a></li>
+            <li><a class="footer-link" href="../../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h3 class="footer-title">Portfolio Categories</h3>
+          <ul class="footer-link-list">
+            <li><a class="footer-link" href="../../portfolio.html?filter=graphic-design">Graphic Design</a></li>
+            <li><a class="footer-link" href="../../portfolio.html?filter=photography">Photography</a></li>
+            <li><a class="footer-link" href="../../portfolio.html?filter=video-production">Video Production</a></li>
+            <li><a class="footer-link" href="../../portfolio.html?filter=web-design">Web Design</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h3 class="footer-title">Open To</h3>
+          <div class="footer-tags" aria-label="Open to collaboration areas">
+            <span class="footer-tag">Mentoring</span>
+            <span class="footer-tag">Social Works</span>
+            <span class="footer-tag">Graphic Design</span>
+            <span class="footer-tag">Creative Collaboration</span>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <p class="footer-copy">&#169; 2026 Shahriyer Sayem</p>
+        <div class="footer-bottom-right">
+          <p class="footer-credit">Built and designed by Shahriyer Sayem</p>
+          <button type="button" class="footer-top-btn" id="footer-back-to-top" aria-label="Back to top">
+            <i class="bi bi-arrow-up" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="../../js/script.js"></script>
+  <script>
+  const text = document.getElementById("chapterContent").innerText;
+  const words = text.split(/\s+/).length;
+  const time = Math.ceil(words / 200);
+
+  document.getElementById("readingTime").innerText =
+    "Estimated reading time: " + time + " min";
+
+  window.addEventListener("scroll", () => {
+    const winScroll = document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("progressBar").style.width = scrolled + "%";
+  });
+</script>
+</body>
+</html>
+
+
+
+
+

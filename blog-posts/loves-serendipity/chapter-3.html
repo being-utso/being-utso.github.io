@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lessons From My First Design Project | Shahriyer Sayem</title>
+  <meta name="description" content="Lessons From My First Design Project - blog post by Shahriyer Sayem.">
+  <meta property="og:title" content="Lessons From My First Design Project | Shahriyer Sayem">
+  <meta property="og:description" content="Lessons From My First Design Project - blog post by Shahriyer Sayem.">
+  <meta property="og:image" content="../../images/portrait.svg">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: #7aa2ff;
+      width: 0%;
+      z-index: 999;
+    }
+
+    .chapter-container {
+      max-width: 700px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .chapter-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .chapter-number {
+      font-size: 13px;
+      opacity: 0.6;
+    }
+
+    .chapter-title {
+      font-size: 32px;
+      margin: 10px 0;
+      font-weight: 600;
+    }
+
+    .reading-time {
+      font-size: 13px;
+      opacity: 0.6;
+    }
+
+    .chapter-content {
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    .chapter-content p {
+      margin-bottom: 20px;
+    }
+
+    .chapter-content p:first-child::first-letter {
+      font-size: 40px;
+      font-weight: 600;
+      float: left;
+      margin-right: 8px;
+    }
+
+    .chapter-nav {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .chapter-nav a {
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      background: rgba(255,255,255,0.06);
+      transition: 0.2s;
+    }
+
+    .chapter-nav a:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      opacity: 0.6;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body class="dark-mode" id="page-top">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top site-navbar">
+      <div class="container">
+        <a class="navbar-brand logo-text" href="../../index.html">Shahriyer Sayem</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="../../blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../contact.html">Contact</a></li>
+          </ul>
+          <div class="theme-toggle-wrapper ms-lg-4 mt-3 mt-lg-0">
+            <input type="checkbox" id="theme-toggle" class="theme-toggle-input" aria-label="Switch to light mode">
+            <label for="theme-toggle" class="theme-toggle-slider" aria-hidden="true">
+              <span class="theme-toggle-moon">🌙</span>
+              <span class="theme-toggle-sun">☀</span>
+              <span class="theme-toggle-knob"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <p class="hero-label">Personal Blog</p>
+        <h3>Love’s Serendipity • Chapter 3</h3>
+        <h1>Digital Footprints</h1>
+        <p class="banner-lead">Small actions begin to reveal what neither of them is ready to admit.</p>
+      </div>
+    </section>
+
+    <section class="py-section">
+      <div class="container">
+        <article class="info-card">
+          <p class="card-label">Personal Blog • March 2, 2026</p>
+          <img class="img-fluid mb-4" src="../../images/chapter3.png" alt="Design project process cover image" loading="lazy" decoding="async">
+          
+          <div class="story-intro">
+            <div class="story-container">
+              <!-- Story Content -->
+              <div class="progress-bar" id="progressBar"></div>
+
+                <div class="chapter-container">
+
+                  <div class="chapter-header">
+                    <p class="chapter-number">Chapter 3 of 7</p>
+                    <h1 class="chapter-title">Digital Footprints</h1>
+                    <p class="reading-time" id="readingTime">Estimated reading time: --</p>
+                  </div>
+
+
+                  <!-- Chapter 3 Starts -->
+                  <div class="chapter-content" id="chapterContent">
+                      <p>It started, as most dangerous things do, with something small.</p>
+                      <P>Amaya told herself she was simply curious. That was all. She was a curious person by nature — it was what made her a good poet, a sharp debater, a careful reader of things. Curiosity was not a flaw. Curiosity was simply paying attention.</p>
+                      <P>And so, three days after the British Council auditorium, she typed his name into the Instagram search bar. Just to see.</p>
+                      <P>Nafis Ahmed. Notre Dame College. The profile wasn't private. Of course it wasn't — he was exactly the kind of person whose life arranged itself naturally into photographs. She scrolled slowly, telling herself she would stop after a few posts. His feed was what she had half-expected and half-dreaded: candid shots with friends, a few from the Boi Mela, a video clip from some previous debate that had collected an unreasonable number of views. He had the easy photogenic quality of someone who never thought too hard about being looked at.</p>
+                      <P>She was about to close the app when a post from three years ago caught her eye — a photograph of him at what looked like a college literary event, holding a battered copy of Sunil Gangopadhyay, laughing at something off-camera. The caption was a line of poetry. Not famous poetry. Something quieter, more personal, the kind of line a person writes when they mean it and hopes no one looks too closely.</p>
+                      <P>Amaya read it twice.</p>
+                      <P>Then, before the part of her brain responsible for self-preservation could intervene, her thumb moved.</p>
+                      <P>The heart turned red.</p>
+                      <P>She stared at the screen. The post was three years old. Three years. The notification would arrive on his phone with a timestamp that made the whole thing indefensible. She could unlike it — she knew she could — but the notification would already have been sent, and the act of unliking would only draw attention to the fact that she had liked it in the first place, which was somehow worse.</p>
+                      <P>She put her phone face-down on her desk and sat very still for a moment.</p>
+                      <P>Then she picked it up and unliked it anyway, because leaving it was not an option either.</p>
+                      <P>Then she put the phone away, stood up, walked to her window, and stared out at the street below with the expression of someone who has just done something they cannot explain and would prefer never to think about again.</p>
+                      <P>Her roommate Priya found her like that twenty minutes later. "What happened to you?"</p>
+                      <P>"Nothing," Amaya said. "I'm studying."</p>
+                      <P>"You're standing at the window."</p>
+                      <P>"I'm thinking about studying."</p>
+                      <P>Priya looked at her for a long moment. "Did you accidentally like something?"</p>
+                      <P>Amaya said nothing. Which was, of course, an answer.</p>
+                      <P>Priya sat down on the bed and folded her hands with the patient gravity of someone settling in for an important conversation. "How old was the post?"</p>
+                      <P>"That's not relevant."</p>
+                      <P>"Amaya."</p>
+                      <P>"Three years."</p>
+                      <P>Priya closed her eyes briefly. "Whose."</p>
+                      <P>"That's also not relevant."</p>
+                      <P>"Is it the debate boy? From Notre Dame?"</p>
+                      <P>The silence that followed was answer enough. Priya fell back onto the bed and laughed — not unkindly, but thoroughly, in the way that only a person who knows you very well can afford to. Amaya turned from the window and looked at her with the dignified expression of someone who had absolutely not been stalking anyone's Instagram.</p>
+                      <P>"It was research," she said.</p>
+                      <P>"Three years back."</p>
+                      <P>"I scroll quickly."</p>
+                      <P>"Amaya, you unliked it, didn't you. You unliked it which means he got the notification and then it disappeared, which is one hundred times worse than just leaving it."</p>
+                      <P></P>Amaya sat down at her desk, picked up a pen, and opened a notebook to a random page as though she intended to write something. She did not write anything. The pen hovered.</p>
+                      <P>"He probably didn't see it," she said, without conviction.</p>
+                      <P style="text-align: center;">* * *</p>
+                      <P>Nafis saw it.</p>
+                      <P>He was in the middle of a conversation with his friend Rafi when his phone lit up on the table between them — an Instagram notification, gone almost before it appeared. He picked up the phone, frowned, checked his activity. Nothing. He went to the post himself, checked the likes. No new names.</p>
+                      <P>He put the phone down.</p>
+                      <P>Rafi, who noticed everything, looked up from his own phone. "What?"</p>
+                      <P>"Nothing. Thought I got a notification."</p>
+                      <P>Rafi studied him for a second, then went back to scrolling. "You've been weird since the British Council thing."</p>
+                      <P>"I haven't been weird."</p>
+                      <P>"You've checked your phone six times in the last hour and you haven't eaten any of your fries."</p>
+                      <P>Nafis looked down at his plate. The fries were cold. He hadn't noticed. He pulled the plate toward him and ate one without tasting it.</p>
+                      <P>He didn't say anything about the notification. There was nothing to say — it had vanished before he could confirm it, and he wasn't the kind of person who went looking for things that had already disappeared.</p>
+                      <P>But he knew what name had crossed his mind in the half-second before he'd checked. And he knew, with the particular uncomfortable clarity of someone who has caught themselves doing something they'd rather not examine, that this was not the first time her name had crossed his mind unbidden this week.</p>
+                      <P>He checked his phone one more time.</p>
+                      <P>Nothing.</p>
+                      <P>He put it away.</p>
+                      <P style="text-align: center;">* * *</p>
+                      <P>Four days later, Amaya received a friend request on Facebook.</p>
+                      <P>She was in the middle of a study session — or what she was calling a study session, which mostly involved rearranging her notes into neater piles and staring at the same paragraph of her physics textbook for twenty minutes — when her phone buzzed. She glanced at it with the mild irritation of someone who had told herself she was not going to be distracted.</p>
+                      <P>Then she saw the name.</p>
+                      <P>She put the phone down. Picked it up. Put it down again.</p>
+                      <P>Then she accepted the request, set the phone face-down on the table, and stared at the Physics book for another five minutes without reading a single word of it.</p>
+                      <P>When she finally allowed herself to look at his profile properly, she was careful this time — methodical, restrained, nothing that required her to venture beyond the last six months. She was not going to make the same mistake twice. She scrolled with the controlled precision of someone defusing something.</p>
+                      <P>She noticed, after a few minutes, that he had liked two of her posts. Recent ones. Without any of the frantic backtracking she had inflicted upon herself.</p>
+                      <P>She stared at this fact for a moment.</p>
+                      <P>She thought about what Priya would say if she told her.</p>
+                      <P>She decided not to tell Priya.</p>
+                      <P>Instead, she closed the app, opened her Physics textbook to the correct page, and read the same paragraph for the sixth time. This time, she retained approximately none of it, but she read it with considerably more composure than before, and that, she decided, was progress.</p>
+                      <P>Outside her window, the city moved through its ordinary evening. Somewhere across Dhaka, in a room she had never been to, a boy had sent a friend request and was now, she suspected, doing something very similar — pretending to be busy, pretending not to wait, pretending that a small digital gesture had not meant anything at all.</p>
+                      <P>They were both, in their own ways, lying to themselves. But the lies were getting harder to maintain.</p>
+                      <p>And that, whether either of them was ready to admit it, was the beginning of something.</p>
+
+                    
+                    </div>
+                  <!-- Chapter 3 Ends -->
+
+                  <div class="chapter-nav">
+                    <a href="chapter-2.html">← Previous</a>
+                    <div></div>
+                    <a href="chapter-4.html">Next →</a>
+                  </div>
+
+                  <a href="../post1.html" class="back-link">
+                    ← Back to Story
+                  </a>
+
+                </div>
+              <!-- Story Ends-->
+            </div>
+            </a>
+          </div>
+
+          <a class="btn btn-outline-dark btn-pill mt-3" href="../../blog.html">Back to Blog</a>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5 footer-grid">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="footer-brand">
+            <a class="footer-brand-name" href="../../index.html#page-top">Shahriyer Sayem</a>
+            <p class="footer-subtitle">Engineering student exploring design, technology, and visual communication.</p>
+            <p class="footer-nickname">Also known as Utso.</p>
+            <ul class="footer-social-list" aria-label="Social links">
+              <li><a href="https://www.linkedin.com/in/shahriyer-sayem-0815a93b0/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>
+              <li><a href="https://github.com/being-utso" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="bi bi-github" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.instagram.com/being_utso/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.facebook.com/utso.sayem" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="mailto:s.sayemx@gmail.com" aria-label="Email Shahriyer Sayem"><i class="bi bi-envelope-fill" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-link-list">
+            <li><a class="footer-link" href="../../index.html">Home</a></li>
+            <li><a class="footer-link" href="../../portfolio.html">Portfolio</a></li>
+            <li><a class="footer-link" href="../../blog.html">Blog</a></li>
+            <li><a class="footer-link" href="../../about.html">About</a></li>
+            <li><a class="footer-link" href="../../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h3 class="footer-title">Portfolio Categories</h3>
+          <ul class="footer-link-list">
+            <li><a class="footer-link" href="../../portfolio.html?filter=graphic-design">Graphic Design</a></li>
+            <li><a class="footer-link" href="../../portfolio.html?filter=photography">Photography</a></li>
+            <li><a class="footer-link" href="../../portfolio.html?filter=video-production">Video Production</a></li>
+            <li><a class="footer-link" href="../../portfolio.html?filter=web-design">Web Design</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h3 class="footer-title">Open To</h3>
+          <div class="footer-tags" aria-label="Open to collaboration areas">
+            <span class="footer-tag">Mentoring</span>
+            <span class="footer-tag">Social Works</span>
+            <span class="footer-tag">Graphic Design</span>
+            <span class="footer-tag">Creative Collaboration</span>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <p class="footer-copy">&#169; 2026 Shahriyer Sayem</p>
+        <div class="footer-bottom-right">
+          <p class="footer-credit">Built and designed by Shahriyer Sayem</p>
+          <button type="button" class="footer-top-btn" id="footer-back-to-top" aria-label="Back to top">
+            <i class="bi bi-arrow-up" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="../../js/script.js"></script>
+  <script>
+  const text = document.getElementById("chapterContent").innerText;
+  const words = text.split(/\s+/).length;
+  const time = Math.ceil(words / 200);
+
+  document.getElementById("readingTime").innerText =
+    "Estimated reading time: " + time + " min";
+
+  window.addEventListener("scroll", () => {
+    const winScroll = document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("progressBar").style.width = scrolled + "%";
+  });
+</script>
+</body>
+</html>
+
+
+
+
+

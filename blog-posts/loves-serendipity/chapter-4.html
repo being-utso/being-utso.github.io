@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lessons From My First Design Project | Shahriyer Sayem</title>
+  <meta name="description" content="Lessons From My First Design Project - blog post by Shahriyer Sayem.">
+  <meta property="og:title" content="Lessons From My First Design Project | Shahriyer Sayem">
+  <meta property="og:description" content="Lessons From My First Design Project - blog post by Shahriyer Sayem.">
+  <meta property="og:image" content="../../images/portrait.svg">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: #7aa2ff;
+      width: 0%;
+      z-index: 999;
+    }
+
+    .chapter-container {
+      max-width: 700px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .chapter-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .chapter-number {
+      font-size: 13px;
+      opacity: 0.6;
+    }
+
+    .chapter-title {
+      font-size: 32px;
+      margin: 10px 0;
+      font-weight: 600;
+    }
+
+    .reading-time {
+      font-size: 13px;
+      opacity: 0.6;
+    }
+
+    .chapter-content {
+      font-size: 17px;
+      line-height: 1.9;
+    }
+
+    .chapter-content p {
+      margin-bottom: 20px;
+    }
+
+    .chapter-content p:first-child::first-letter {
+      font-size: 40px;
+      font-weight: 600;
+      float: left;
+      margin-right: 8px;
+    }
+
+    .chapter-nav {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .chapter-nav a {
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      background: rgba(255,255,255,0.06);
+      transition: 0.2s;
+    }
+
+    .chapter-nav a:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      opacity: 0.6;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body class="dark-mode" id="page-top">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top site-navbar">
+      <div class="container">
+        <a class="navbar-brand logo-text" href="../../index.html">Shahriyer Sayem</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="../../blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="../../contact.html">Contact</a></li>
+          </ul>
+          <div class="theme-toggle-wrapper ms-lg-4 mt-3 mt-lg-0">
+            <input type="checkbox" id="theme-toggle" class="theme-toggle-input" aria-label="Switch to light mode">
+            <label for="theme-toggle" class="theme-toggle-slider" aria-hidden="true">
+              <span class="theme-toggle-moon">🌙</span>
+              <span class="theme-toggle-sun">☀</span>
+              <span class="theme-toggle-knob"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <p class="hero-label">Personal Blog</p>
+        <h3>Love’s Serendipity • Chapter 4</h3>
+        <h1>A Voice in the Dark</h1>
+        <p class="banner-lead">A song says what words have not yet found the courage to express.</p>
+      </div>
+    </section>
+
+    <section class="py-section">
+      <div class="container">
+        <article class="info-card">
+          <p class="card-label">Personal Blog • March 2, 2026</p>
+          <img class="img-fluid mb-4" src="../../images/chapter4.png" alt="Design project process cover image" loading="lazy" decoding="async">
+          
+          <div class="story-intro">
+            <div class="story-container">
+              <!-- Story Content -->
+              <div class="progress-bar" id="progressBar"></div>
+
+                <div class="chapter-container">
+
+                  <div class="chapter-header">
+                    <p class="chapter-number">Chapter 4 of 7</p>
+                    <h1 class="chapter-title">A Voice in the Dark</h1>
+                    <p class="reading-time" id="readingTime">Estimated reading time: --</p>
+                  </div>
+
+
+                  <!-- Chapter 4 Starts -->
+                  <div class="chapter-content" id="chapterContent">
+
+                    <p>
+                    The 25th of Boishakh arrived the way it always did in Dhaka — wrapped in heat and the particular golden light of a Bengali afternoon that made everything look slightly more significant than it was. The open-air stage at Dhaka University had been dressed for the occasion: marigolds strung between posts, a microphone standing alone at the center, and rows of plastic chairs filling steadily with students and faculty who had come to mark Rabindranath Tagore's birthday the way their parents and grandparents had before them — with music, with poetry, with the quiet insistence that some things are worth preserving.
+                    </p><p>
+                    Amaya had come with Priya and two others from her college. She had dressed carefully without admitting to herself that she had dressed carefully — a white and red cotton sari, her hair pinned simply, a small pair of gold earrings that had belonged to her mother. It was Rabindra Jayanti. It was appropriate to make an effort. That was all.
+                    </p><p>
+                    They found seats toward the middle, and Amaya settled in with the comfortable anticipation of someone who genuinely loved these evenings — the gradual darkening of the sky, the way the stage lights came up slowly as if reluctant to interrupt the dusk, the first notes of a sitar from somewhere offstage. Around her, the audience arranged itself into the particular stillness that only live music can produce, the kind where everyone's shoulders drop a fraction of an inch without their noticing.
+                    </p><p>
+                    The program moved through its early acts — a dance piece, a recitation, a student choir that was earnest if slightly unsteady on the high notes. Amaya watched with genuine attention, her notebook open on her lap out of habit, a pen tucked behind her ear. Priya leaned over twice to whisper commentary that made Amaya press her lips together to keep from laughing.
+                    </p><p>
+                    It was during the intermission that she excused herself to find water.
+                    </p><p>
+                    The stalls near the edge of the grounds were crowded, and by the time she had gotten a bottle and made her way back, the program had resumed. She was still several rows from her seat when she heard it — a voice, and then the first line of a Tagore song — and something in the quality of it made her stop.
+                    </p><p>
+                    She had heard Tagore sung many times. She had grown up with it — at school programs, at family gatherings, drifting from the radio on Sunday mornings. She knew what it was supposed to sound like: careful, reverent, technically precise, the emotion held at a respectful distance from the melody.
+                    </p><p>
+                    This was not that.
+                    </p><p>
+                    The voice on stage sang Tagore the way Tagore had perhaps meant to be sung — with the full weight of the words behind each note, without the self-consciousness that usually crept in when someone knew they were being listened to. It was not a perfect voice, technically speaking. It had an edge to it, a roughness in the lower register that a purist might have corrected. But it was honest in a way that perfect voices rarely were, and honesty, Amaya had always believed, was worth more than precision.
+                    </p><p>
+                    She looked toward the stage.
+                    </p><p>
+                    She recognized him before her mind had fully processed what she was seeing.
+                    </p><p>
+                    Nafis stood at the microphone with his eyes half-closed, the way people close their eyes not for the audience's benefit but because the song requires it — because some things are easier to mean when you are not watching yourself mean them. He was in a white punjabi, the stage lights catching the edge of his profile, and he sang with a stillness that was almost startling from someone whose default mode, in her limited but vivid experience of him, was a kind of restless, kinetic energy.
+                    </p><p>
+                    Amaya stood where she was, three rows from her seat, the water bottle cool in her hand, and listened.
+                    </p><p>
+                    The song was Tumi Robe Nirobe. You will remain, in silence, in the depths of my being. One of Tagore's most quietly devastating compositions — a song about presence, about the way a person can inhabit you without trying, without permission, simply by existing and then continuing to exist in memory long after they have left the room.
+                    </p><p>
+                    She told herself she was simply pausing to listen. That the song was beautiful and she had stopped because of the song, not because of the person singing it.
+                    </p><p>
+                    She told herself this with less conviction than she would have liked.
+                    </p><p>
+                    When it was over, the applause broke the spell cleanly — the audience returning to itself, the stage lights shifting, Nafis stepping back from the microphone with the slightly dazed expression of someone emerging from something private. He looked out at the crowd without seeming to see it. Then someone said something to him from the wings and he smiled — his ordinary smile, the one she had seen directed at other people, easy and slightly crooked — and walked off stage.
+                    </p><p>
+                    Amaya went back to her seat.
+                    </p><p>
+                    "You missed the best part," Priya said. "There was a boy from Notre Dame who just sang and honestly, Amaya —"
+                    </p><p>
+                    "I heard him," Amaya said.
+                    </p><p>
+                    Priya looked at her. Then looked more carefully. "You heard him."
+                    </p><p>
+                    "I was standing at the back. I caught the end of it."
+                    </p><p>
+                    "And?"
+                    </p><p>
+                    Amaya uncapped her water bottle and took a measured sip. "He was good," she said, in the tone of someone offering a factual assessment of a piece of furniture.
+                    </p><p>
+                    Priya stared at her for three full seconds. "That was the debate boy, wasn't it."
+                    </p><p>
+                    Amaya opened her notebook to a blank page and wrote nothing on it.
+                    </p><p>
+                    "Amaya."
+                    </p><p>
+                    "Watch the program, Priya."
+                    </p><p style="text-align: center;">
+                    * * *
+                    </p><p>
+                    She found him afterward — or rather, she chose to walk in the direction where she could see him standing with a small group near the edge of the stage area, and if that walk happened to bring her close enough for eye contact, it was incidental.
+                    </p><p>
+                    It was not incidental.
+                    </p><p>
+                    He saw her at almost the same moment she slowed her pace. Something crossed his expression — surprise, and then something quieter and less easy to name. He said something brief to the person beside him and took a few steps in her direction, meeting her at an unmarked point between his group and hers, the way people do when they have both decided something without discussing it.
+                    </p><p>
+                    "I didn't know you'd be here," he said.
+                    </p><p>
+                    "It's Rabindra Jayanti," she said. "I didn't know you sang."
+                    </p><p>
+                    "It's not something that comes up in debate."
+                    </p><p>
+                    "No," she agreed. "It doesn't."
+                    </p><p>
+                    A pause settled between them — not uncomfortable, but full, the way pauses are when both people are thinking more than they are saying. Around them the crowd was dispersing slowly into the warm evening, voices and laughter drifting upward into a sky that had deepened to a soft, starless dark.
+                    </p><p>
+                    "You were good," she said. The same words she had used with Priya, but stripped now of their careful neutrality. She said it the way she would have written it — plainly, without decoration, meaning it precisely as much as it sounded.
+                    </p><p>
+                    Nafis looked at her for a moment. "Thank you," he said, and unlike many people who receive compliments, he did not deflect it or diminish it. He simply accepted it, which she found, inexplicably, more disarming than any amount of charm would have been.
+                    </p><p>
+                    "The roughness in the lower register," she added, because she could not quite help herself. "Don't fix it. It's what makes it honest."
+                    </p><p>
+                    He blinked. Then a slow smile crossed his face — not the easy, public one she had seen on stage, but something smaller and more genuine. "That's a very specific thing to notice."
+                    </p><p>
+                    "I pay attention to things."
+                    </p><p>
+                    "I remember," he said.
+                    </p><p>
+                    They stood for a moment longer, the Dhaka evening warm around them, the last of the stage lights going down behind him. Then Priya appeared at Amaya's elbow with the studied casualness of someone who had absolutely been watching from a distance and had timed her arrival deliberately.
+                    </p><p>
+                    "Sorry to interrupt," Priya said, not looking sorry in the least. "We should head back."
+                    </p><p>
+                    Amaya nodded. She looked at Nafis. "Goodnight."
+                    </p><p>
+                    "Goodnight," he said.
+                    </p><p>
+                    She walked away with Priya, who waited a full thirty seconds before speaking. "So."
+                    </p><p>
+                    "Don't."
+                    </p><p>
+                    "I'm just going to say —"
+                    </p><p>
+                    "Priya."
+                    </p><p>
+                    "You like him."
+                    </p><p>
+                    Amaya walked in silence for a moment, her notebook under her arm, the evening air warm on her face. Somewhere behind her, in the dispersing crowd, she was fairly certain she could still hear the ghost of that song — the particular ache of it, the way it had sat in the air above the stage and refused to be entirely ordinary.
+                    </p><p>
+                    You will remain, in silence, in the depths of my being.
+                    </p><p>
+                    "I'm going home," she said.
+                    </p><p>
+                    Priya smiled and said nothing more. She didn't need to.
+                  </p>
+
+
+                    </div>
+                  <!-- Chapter 4 Ends -->
+
+                  <div class="chapter-nav">
+                    <a href="chapter-3.html">← Previous</a>
+                    <div></div>
+                    <a href="chapter-5.html">Next →</a>
+                  </div>
+
+                  <a href="../post1.html" class="back-link">
+                    ← Back to Story
+                  </a>
+
+                </div>
+              <!-- Story Ends-->
+            </div>
+            </a>
+          </div>
+
+          <a class="btn btn-outline-dark btn-pill mt-3" href="../../blog.html">Back to Blog</a>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5 footer-grid">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="footer-brand">
+            <a class="footer-brand-name" href="../../index.html#page-top">Shahriyer Sayem</a>
+            <p class="footer-subtitle">Engineering student exploring design, technology, and visual communication.</p>
+            <p class="footer-nickname">Also known as Utso.</p>
+            <ul class="footer-social-list" aria-label="Social links">
+              <li><a href="https://www.linkedin.com/in/shahriyer-sayem-0815a93b0/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>
+              <li><a href="https://github.com/being-utso" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="bi bi-github" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.instagram.com/being_utso/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.facebook.com/utso.sayem" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="mailto:s.sayemx@gmail.com" aria-label="Email Shahriyer Sayem"><i class="bi bi-envelope-fill" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-link-list">
+            <li><a class="footer-link" href="../../index.html">Home</a></li>
+            <li><a class="footer-link" href="../../portfolio.html">Portfolio</a></li>
+            <li><a class="footer-link" href="../../blog.html">Blog</a></li>
+            <li><a class="footer-link" href="../../about.html">About</a></li>
+            <li><a class="footer-link" href="../../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h3 class="footer-title">Portfolio Categories</h3>
+          <ul class="footer-link-list">
+            <li><a class="footer-link" href="../../portfolio.html?filter=graphic-design">Graphic Design</a></li>
+            <li><a class="footer-link" href="../../portfolio.html?filter=photography">Photography</a></li>
+            <li><a class="footer-link" href="../../portfolio.html?filter=video-production">Video Production</a></li>
+            <li><a class="footer-link" href="../../portfolio.html?filter=web-design">Web Design</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h3 class="footer-title">Open To</h3>
+          <div class="footer-tags" aria-label="Open to collaboration areas">
+            <span class="footer-tag">Mentoring</span>
+            <span class="footer-tag">Social Works</span>
+            <span class="footer-tag">Graphic Design</span>
+            <span class="footer-tag">Creative Collaboration</span>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <p class="footer-copy">&#169; 2026 Shahriyer Sayem</p>
+        <div class="footer-bottom-right">
+          <p class="footer-credit">Built and designed by Shahriyer Sayem</p>
+          <button type="button" class="footer-top-btn" id="footer-back-to-top" aria-label="Back to top">
+            <i class="bi bi-arrow-up" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="../../js/script.js"></script>
+  <script>
+  const text = document.getElementById("chapterContent").innerText;
+  const words = text.split(/\s+/).length;
+  const time = Math.ceil(words / 200);
+
+  document.getElementById("readingTime").innerText =
+    "Estimated reading time: " + time + " min";
+
+  window.addEventListener("scroll", () => {
+    const winScroll = document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    document.getElementById("progressBar").style.width = scrolled + "%";
+  });
+</script>
+</body>
+</html>
+
+
+
+
+

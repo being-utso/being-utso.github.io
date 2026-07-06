@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Admission Journey at a Glance</title>
+  <meta name="description" content="A visual story of my university admission journey and results across 11 competitive entrance exams in Bangladesh.">
+  <meta property="og:title" content="My Admission Journey at a Glance">
+  <meta property="og:description" content="A visual story of my university admission journey and results across 11 competitive entrance exams in Bangladesh.">
+  <meta property="og:image" content="../images/blog-admission.svg">
+  <meta property="og:type" content="article">
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/admi-journey.css">
+</head>
+<body class="dark-mode eej-page" id="page-top">
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-content">
+      <h1 class="preloader-name">Shahriyer Sayem</h1>
+      <div class="preloader-light-track" aria-hidden="true">
+        <span class="preloader-light-sweep"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="eej-progress" aria-hidden="true">
+    <span class="eej-progress-fill" id="eejProgressFill"></span>
+  </div>
+  <canvas class="eej-particles-canvas" id="eejParticles" aria-hidden="true"></canvas>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top site-navbar">
+      <div class="container">
+        <a class="navbar-brand logo-text" href="../index.html">Shahriyer Sayem</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="../portfolio.html">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link active" href="../blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+          </ul>
+          <div class="theme-toggle-wrapper ms-lg-4 mt-3 mt-lg-0">
+            <input type="checkbox" id="theme-toggle" class="theme-toggle-input" aria-label="Switch to light mode">
+            <label for="theme-toggle" class="theme-toggle-slider" aria-hidden="true">
+              <span class="theme-toggle-moon"><i class="bi bi-moon-fill" aria-hidden="true"></i></span>
+              <span class="theme-toggle-sun"><i class="bi bi-sun-fill" aria-hidden="true"></i></span>
+              <span class="theme-toggle-knob"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <aside class="eej-side-nav" aria-label="Story sections">
+    <span class="eej-side-line" aria-hidden="true">
+      <span class="eej-side-line-progress" id="eejSideLineProgress"></span>
+    </span>
+    <a href="#hero" data-target="hero" data-label="Hero" class="eej-side-dot is-active" aria-label="Hero section">
+      <span class="visually-hidden">Hero</span>
+    </a>
+    <a href="#buet" data-target="buet" data-label="BUET" class="eej-side-dot" aria-label="BUET section">
+      <span class="visually-hidden">BUET</span>
+    </a>
+    <a href="#engineering" data-target="engineering" data-label="Engineering Universities" class="eej-side-dot" aria-label="Engineering Universities section">
+      <span class="visually-hidden">Engineering Universities</span>
+    </a>
+    <a href="#dua" data-target="dua" data-label="DU A" class="eej-side-dot" aria-label="DU A section">
+      <span class="visually-hidden">DU A</span>
+    </a>
+    <a href="#additional" data-target="additional" data-label="Additional Results" class="eej-side-dot" aria-label="Additional Results section">
+      <span class="visually-hidden">Additional Results</span>
+    </a>
+    <a href="#agri" data-target="agri" data-label="Agri Guccho" class="eej-side-dot" aria-label="Agri Guccho section">
+      <span class="visually-hidden">Agri Guccho</span>
+    </a>
+    <a href="#complete-results" data-target="complete-results" data-label="Complete Results" class="eej-side-dot" aria-label="Complete Results section">
+      <span class="visually-hidden">Complete Results</span>
+    </a>
+    <a href="#closing" data-target="closing" data-label="Closing" class="eej-side-dot" aria-label="Closing section">
+      <span class="visually-hidden">Closing</span>
+    </a>
+  </aside>
+
+  <main class="eej-main">
+    <section id="hero" class="eej-section eej-hero">
+      <div class="container eej-container">
+        <p class="eej-kicker" data-hero>Admission Journey 2025-26</p>
+        <h1 class="eej-hero-title" data-hero>My Admission Journey <br>at a Glance</h1>
+        <!--<p class="eej-hero-subtitle" data-hero>A visual story of perseverance, uncertainty, and achievement.</p>-->
+        <p class="eej-lead eej-hero-lead" data-hero>
+          This page documents my admission journey through some of the most competitive university entrance exams in Bangladesh. It was not one test and one result; it was months of effort, repeated pressure, and the discipline to keep moving through every uncertainty.
+        </p>
+      </div>
+      <div class="eej-hero-glow" aria-hidden="true"></div>
+    </section>
+
+    <section id="buet" class="eej-section eej-section-featured eej-accent-buet">
+      <div class="container eej-container">
+        <div class="eej-card eej-feature-card eej-reveal">
+          <p class="eej-badge">Final Destination</p>
+          <h2 class="eej-display-title">BUET</h2>
+          <p class="eej-fullname">Bangladesh University of Engineering and Technology</p>
+          <div class="eej-rank-wrap">
+            <span class="eej-rank eej-static-rank">70th</span>
+          </div>
+          <p class="">
+            বাকি ১০টা পরীক্ষার মধ্যে ৮টাতে ভালো রেজাল্ট করার পরেও just এই একটার জন্যই অপেক্ষায় ছিলাম; 
+          মনে অনেক আশা, ভরসা,আস্থা নিয়ে। Like everytime 
+            </p>
+            <p>
+            সব পরীক্ষাতেই প্রশ্ন অনেক কঠিন আসবে ভেবে গেলেও একটা possibility থাকতোই যে হয়তো প্রশ্ন সোজা আসবে। কিন্তু বুয়েটে sure ই ছিলাম যে প্রশ্ন tough আসবে অনেক। তাই হয়তো সব নতুন প্রশ্ন দেখেও আলাদা কোনো feelings কাজ করেনি; even সব প্রশ্ন যে নতুন ছিল সেটা তো পরীক্ষা শেষে সবার মুখে শুনে জানতে পারছিলাম। পরীক্ষা শেষে অনেক regret হচ্ছিল কয়েকদিন যে একটা math এক্সাম শুরুর আগেই প্রশ্ন পড়ে মাথায় অনেকটা solve ও করে ফেলছিলাম, কিন্তু কিছু লিখিনি ওই math টায়। পরে একটা কথা মনে পড়ল যে পরীক্ষার আগের রাতে Shifat ভাইয়া একটা কথা বলছিল, "উৎস, দেখো তোমার তো বাকি সব জায়গাতেই হচ্ছে, বুয়েট এও হয়ে যাবে In sha Allah. এখন যদি এখানে আল্লাহ তোমার জন্য ভালো কিছু লিখে না রাখে তাহলে আসবে না।" Alhamdulillah!
+            </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="engineering" class="eej-section eej-accent-engineering">
+      <div class="container eej-container">
+        <div class="eej-section-head eej-reveal">
+          <h2 class="eej-section-title">Engineering Universities</h2>
+          <p class="eej-lead">Three engineering universities. Three important milestones in the same journey.</p>
+        </div>
+
+        <div class="row g-4 eej-stagger-group">
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="eej-card eej-result-card">
+              <h3>RUET</h3>
+              <p class="eej-rank-inline"><span data-countup="666" data-suffix="th">666th</span></p>
+              <p>
+                Admission Journey এর Last Exam; এক্সামের চিন্তার থেকে এক্সাম শেষ হইলে কতটা relief পাবো সেই চিন্তাই মাথায় বেশি ঘুরছিল। পরীক্ষার আগে সেভাবে কিছুই পড়িনি আলাদা করে, তাই হয়তো পরীক্ষার সময় অনেক উত্তরও মিলতেছিলো না ঠিকই, কিন্তু উত্তর মিলেনা জন্য যেই বাজে ভাবে option test করা শুরু করছিলাম সেটা ভাবলেও হাসি পায়।
+              </p>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="eej-card eej-result-card">
+              <h3>CUET</h3>
+              <p class="eej-rank-inline"><span data-countup="630" data-suffix="th">630th</span></p>
+              <p>
+                KUET দিয়ে আসার পর আবার এত journey করে চট্টগ্রাম যেয়ে CUET এর পরীক্ষা দেয়ার মত সেরকম কোনো energy ই ছিল না। তবুও টিকেট থেকে শুরু করে সব ঠিক করা ছিল জন্য অনেকটা বাধ্য হয়েই এক্সাম attend করি।প্রথম ইঞ্জিনিয়ারিং MCQ প্রশ্ন দেখে ভালোই একটা reality check ও খাইসি। কিন্তু এতদিন ধরে পরীক্ষা দিতে দিতে panic খাওয়ায় কথা পরীক্ষার হলে কেন জানি মাথায় আসতো না আর।
+              </p>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="eej-card eej-result-card">
+              <h3>KUET</h3>
+              <p class="eej-rank-inline"><span data-countup="194" data-suffix="th">194th</span></p>
+              <p>
+                কোথাও একটা পড়ছিলাম যে "জীবনে কোনো কিছু শিখলে/পড়লে তা জীবনে কোথাও না কোথাও কাজে দিবেই । কুয়েট এর পরীক্ষায় সেটা একটু ভালো মতো realize করছি। Out of the syllabus এর এক প্রশ্ন বুয়েট এর আগে যেটা একবার চোখে পড়ছিল সেটা হুবহু কুয়েটে আসছে! 
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dua" class="eej-section eej-section-featured eej-accent-dua">
+      <div class="container eej-container">
+        <div class="eej-card eej-feature-card eej-reveal">
+          <h2 class="eej-display-title">DU A</h2>
+          <p class="eej-fullname">University of Dhaka</p>
+          <div class="eej-rank-wrap eej-rank-secondary">
+            <span class="eej-rank" data-countup="1128" data-suffix="th">1128th</span>
+          </div>
+          <p class="">
+            
+          </p>
+          <p>
+            ঢাবি ফিজিক্স প্রশ্ন কঠিন করবে তা তো expected ই ছিল, কিন্তু unexpected ছিল উত্তরপত্রে যেখানে যেটা লেখার কথা সেখানে তা না লিখে অন্য জায়গায় লেখার ব্যাপারটা। :3
+তবুও পরীক্ষা শেষে মনে হইছিলো যে মেরিট অনেক বেশি ভালো আসবে। কিন্তু এডমিশান টাইমে তো আর expected কিছুই হয়না।
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="additional" class="eej-section eej-accent-additional">
+      <div class="container eej-container">
+        <div class="eej-section-head eej-reveal">
+          <h2 class="eej-section-title">Additional University Results</h2>
+          <p class="eej-lead">Strong performances across specialized and public universities.</p>
+        </div>
+
+        <div class="row g-4 eej-stagger-group">
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="eej-card eej-result-card">
+              <h3>JU A</h3>
+              <p class="eej-rank-inline">
+                <span data-countup="27" data-suffix="th">27th</span>
+                <small>(Shift 4)</small>
+              </p>
+              <p>
+                JU A নিয়ে আমার কোনো আশা ভরসা কিছুই ছিল না। Even ওখানে কোন কোন সাবজেক্ট থেকে প্রশ্ন আসবে বা ওখানকার কোন সাবজেক্ট ভালো সেটা নিয়েও আমার কোনো জ্ঞান ছিল না। পুরা আল্লাহর উপর ভরসা করে দেয়া একটা এক্সাম, ২৭ তারিখ পর্যন্ত ভার্সিটির জন্য যা পড়া ছিল সেই prep দিয়েই JU দিতে গেছলাম।
+              </p>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="eej-card eej-result-card">
+              <h3>SUST</h3>
+              <p class="eej-rank-inline"><span data-countup="887" data-suffix="th">887th</span></p>
+              <p>
+                খুব সম্ভবত DU এর আগে একবার SUST এর Question bank খুলে গত বছরের বায়োলজি প্রশ্ন solve করে depression এ চলে গেছলাম মার্কস দেখে। SUST এর আগের রাতে তাই আর question bank খোলার সাহস পাইনি। বায়োলজি এর জায়গায় ইংরেজি দাগালে হয়তো মেরিট আরো ভালো আসতো কিন্তু বায়োলজিকে ditch মারার জন্য তো আর এতদিন বায়োলজি পড়িনি!
+              </p>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="eej-card eej-result-card">
+              <h3>BUTEX</h3>
+              <p class="eej-rank-inline"><span data-countup="618" data-suffix="th">618th</span></p>
+              <p>
+                BUTEX দিয়েই শুরু হয় Engineering Exam, অনেক কঠিন প্রশ্ন হবে এই mentality নিয়ে এক্সাম দিতে গেছলাম, কিন্তু যেয়ে দেখি প্রশ্ন মোটামুটি সোজাই। তখন প্রশ্ন দেখে যেই confidence টা পাইছিলাম ওই এক confidence দিয়েই Alhamdulillah বাকি সব Engineering এক্সাম পার করতে পারছি।
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="agri" class="eej-section eej-section-featured eej-accent-agri">
+      <div class="container eej-container">
+        <div class="eej-card eej-feature-card eej-reveal">
+          <h2 class="eej-display-title">Agri Guccho</h2>
+          <div class="eej-rank-wrap eej-rank-secondary">
+            <span class="eej-rank" data-countup="137" data-suffix="th">137th</span>
+          </div>
+          <p class="">
+             
+          </p>
+          <p>
+            কলেজ লাইফের শুরুতেই ঠিক করছিলাম যে এক বায়োলজি বাদ দিবোনা এই কৃষি গুচ্ছ এর জন্য। যদি By any chance কোথাও চান্স না হয় তাহলে কৃষি গুচ্ছটাই হবে Last Backup Plan, কিন্তু কে জানত যে সেই last অপশন টাই প্রথমে sure হয়ে যাবে!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="complete-results" class="eej-section eej-accent-complete">
+      <div class="container eej-container">
+        <div class="eej-section-head eej-reveal">
+          <h2 class="eej-section-title">Complete Results</h2>
+          <p class="eej-lead">Every exam. Every result. One unforgettable journey.</p>
+        </div>
+
+        <div class="eej-results-cloud eej-reveal" id="eejResultsCloud">
+          <span class="eej-result-pill eej-pill-buet" data-result-pill>BUET: 70th</span>
+          <span class="eej-result-pill eej-pill-ruet" data-result-pill>RUET: 666th</span>
+          <span class="eej-result-pill eej-pill-cuet" data-result-pill>CUET: 630th</span>
+          <span class="eej-result-pill eej-pill-kuet" data-result-pill>KUET: 194th</span>
+          <span class="eej-result-pill eej-pill-dua" data-result-pill>DU A: 1128th</span>
+          <span class="eej-result-pill eej-pill-jua" data-result-pill>JU A: 27th (Shift 4)</span>
+          <span class="eej-result-pill eej-pill-sust" data-result-pill>SUST: 887th</span>
+          <span class="eej-result-pill eej-pill-butex" data-result-pill>BUTEX: 618th</span>
+          <span class="eej-result-pill eej-pill-agri" data-result-pill>Agri Guccho: 137th</span>
+          <span class="eej-result-pill eej-pill-iba" data-result-pill>DU IBA: Fail</span>
+          <span class="eej-result-pill eej-pill-medical" data-result-pill>Medical: 61.25 (Passed)</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!--
+    <section id="timeline" class="eej-section eej-accent-timeline">
+      <div class="container eej-container">
+        <div class="eej-section-head eej-reveal">
+          <h2 class="eej-section-title">Timeline</h2>
+          <p class="eej-lead">Preparation → Exams → Waiting → Results → BUET</p>
+        </div>
+
+        <div class="eej-timeline">
+          <div class="eej-timeline-item eej-reveal">
+            <span class="eej-timeline-dot"></span>
+            <h3>Preparation</h3>
+            <p>Long months of routine, revision cycles, and strategic problem-solving.</p>
+          </div>
+          <div class="eej-timeline-item eej-reveal">
+            <span class="eej-timeline-dot"></span>
+            <h3>Exam Season</h3>
+            <p>One test after another, each requiring a reset of focus and confidence.</p>
+          </div>
+          <div class="eej-timeline-item eej-reveal">
+            <span class="eej-timeline-dot"></span>
+            <h3>Waiting</h3>
+            <p>The most difficult phase: silence, uncertainty, and patience under pressure.</p>
+          </div>
+          <div class="eej-timeline-item eej-reveal">
+            <span class="eej-timeline-dot"></span>
+            <h3>Results</h3>
+            <p>A sequence of outcomes that reflected effort, resilience, and growth.</p>
+          </div>
+          <div class="eej-timeline-item eej-reveal">
+            <span class="eej-timeline-dot"></span>
+            <h3>BUET</h3>
+            <p>The milestone that made the entire path feel complete.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+
+
+    <section id="closing" class="eej-section eej-accent-closing">
+      <div class="container eej-container">
+        <div class="eej-closing eej-card eej-reveal">
+          <p class="eej-arabic">الحمد لله</p>
+          <h2 class="eej-closing-title">Alhamdulillah for Everything</h2>
+          <p class="eej-closing-subtitle">Every result tells a story.</p>
+          <p class="">
+            This journey was about more than ranks. It was about discipline, faith, setbacks, growth, and the courage to keep moving forward.
+          </p>
+          <p class="eej-quote">And Allah will provide for you from where you do not expect. And whoever relies upon Allah - then He is sufficient for you.</p>
+          <div class="eej-closing-burst" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="eej-actions eej-reveal">
+          <button type="button" class="btn btn-primary btn-pill" id="eejShareButton">
+            <i class="bi bi-share-fill" aria-hidden="true"></i>
+            Share this story
+          </button>
+          <button type="button" class="btn btn-outline-dark btn-pill" id="eejCopyLinkButton">
+            <i class="bi bi-link-45deg" aria-hidden="true"></i>
+            Copy link
+          </button>
+          <a href="../blog.html" class="btn btn-outline-dark btn-pill">Back to Blog</a>
+          <a href="../portfolio.html" class="btn btn-outline-dark btn-pill">View My Portfolio</a>
+        </div>
+
+        <div class="eej-social-links eej-reveal" aria-label="Share links">
+          <a id="eejShareFacebook" target="_blank" rel="noopener noreferrer" href="#">Facebook</a>
+          <a id="eejShareLinkedIn" target="_blank" rel="noopener noreferrer" href="#">LinkedIn</a>
+          <a id="eejShareX" target="_blank" rel="noopener noreferrer" href="#">X</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 g-lg-5 footer-grid">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="footer-brand">
+            <a class="footer-brand-name" href="../index.html#page-top">Shahriyer Sayem</a>
+            <p class="footer-subtitle">Engineering student exploring design, technology, and visual communication.</p>
+            <p class="footer-nickname">Also known as Utso.</p>
+            <ul class="footer-social-list" aria-label="Social links">
+              <li><a href="https://www.linkedin.com/in/shahriyer-sayem-0815a93b0/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="bi bi-linkedin" aria-hidden="true"></i></a></li>
+              <li><a href="https://github.com/being-utso" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="bi bi-github" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.instagram.com/being_utso/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile"><i class="bi bi-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.facebook.com/utso.sayem" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile"><i class="bi bi-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="mailto:s.sayemx@gmail.com" aria-label="Email Shahriyer Sayem"><i class="bi bi-envelope-fill" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-link-list">
+            <li><a class="footer-link" href="../index.html">Home</a></li>
+            <li><a class="footer-link" href="../portfolio.html">Portfolio</a></li>
+            <li><a class="footer-link" href="../blog.html">Blog</a></li>
+            <li><a class="footer-link" href="../about.html">About</a></li>
+            <li><a class="footer-link" href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h3 class="footer-title">Portfolio Categories</h3>
+          <ul class="footer-link-list">
+            <li><a class="footer-link" href="../portfolio.html?filter=graphic-design">Graphic Design</a></li>
+            <li><a class="footer-link" href="../portfolio.html?filter=photography">Photography</a></li>
+            <li><a class="footer-link" href="../portfolio.html?filter=video-production">Video Production</a></li>
+            <li><a class="footer-link" href="../portfolio.html?filter=web-design">Web Design</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+          <h3 class="footer-title">Open To</h3>
+          <div class="footer-tags" aria-label="Open to collaboration areas">
+            <span class="footer-tag">Mentoring</span>
+            <span class="footer-tag">Social Works</span>
+            <span class="footer-tag">Graphic Design</span>
+            <span class="footer-tag">Creative Collaboration</span>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <p class="footer-copy">&#169; 2026 Shahriyer Sayem</p>
+        <div class="footer-bottom-right">
+          <p class="footer-credit">Built and designed by Shahriyer Sayem</p>
+          <button type="button" class="footer-top-btn" id="footer-back-to-top" aria-label="Back to top">
+            <i class="bi bi-arrow-up" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/admi-journey.js"></script>
+</body>
+</html>
